@@ -2,11 +2,12 @@ const express = require('express');
 const app = express();
 const http = require('http').createServer(app);
 
-const io = require('socket.io')(http, {
-  cors: {
-    origin: '*',   // <-- This line is important!
-    methods: ['GET', 'POST']
-  }
+// Initialize Socket.IO with CORS settings
+const io = new Server(server, {
+    cors: {
+        origin: "*", // Allow all origins (adjust as needed for security)
+        methods: ["GET", "POST"]
+    }
 });
 
 app.get('/', (req, res) => {
