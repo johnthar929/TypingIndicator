@@ -5,8 +5,6 @@ const { Server } = require('socket.io');
 const app = express();
 const server = http.createServer(app);
 
-// Use the Render-assigned PORT or default to 3000
-const PORT = process.env.PORT || 3000;
 
 // Initialize Socket.IO with CORS settings
 const io = new Server(server, {
