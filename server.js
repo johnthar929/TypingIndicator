@@ -8,7 +8,7 @@ const server = http.createServer(app);
 // Initialize Socket.IO with CORS settings
 const io = new Server(server, {
     cors: {
-        origin: "https://johnthar.epizy.com", // <-- your website domain
+        origin: "*", // <-- your website domain
         methods: ["GET", "POST"]
     }
 });
