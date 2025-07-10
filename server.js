@@ -8,10 +8,11 @@ const server = http.createServer(app);
 // Initialize Socket.IO with CORS settings
 const io = new Server(server, {
     cors: {
-        origin: "*", // Allow all origins (or your specific domain)
+        origin: "https://johnthar.epizy.com", // <-- your website domain
         methods: ["GET", "POST"]
     }
 });
+
 
 app.get('/', (req, res) => {
   res.send('Socket.IO Server running!');
